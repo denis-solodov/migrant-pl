@@ -1,0 +1,15 @@
+# Migrant PL
+
+> Experimental, MIT-licensed AI agent skill for Polish migration law. Responses require verification; it is not a legal adviser or government service.
+
+## Project
+- [Overview and examples](https://denis-solodov.github.io/migrant-pl/): Scope, installation, 14 fictional multilingual prompts and limitations.
+- [Repository](https://github.com/denis-solodov/migrant-pl): Maintained source of the skill.
+- [Skill instructions](https://github.com/denis-solodov/migrant-pl/blob/main/SKILL.md): Workflow and required source verification.
+- [Download v1.0.0](https://github.com/denis-solodov/migrant-pl/releases/download/v1.0.0/migrant-pl-1.0.0.zip): Installable single-skill archive.
+- [Official-source protocol](https://github.com/denis-solodov/migrant-pl/blob/main/references/sources.md): Permitted authorities and verification requirements.
+- [Test scenarios](https://github.com/denis-solodov/migrant-pl/blob/main/tests/scenarios.md): Manual evaluations, not passed tests.
+- [Issues](https://github.com/denis-solodov/migrant-pl/issues): Report anonymised errors with official supporting sources.
+
+## Scope and limitations
+Polish residence, work, family, citizenship, international protection, EU free movement, refusals and return procedures. Explanations in the user's language; legal drafts in Polish. No current legal threshold should be inferred from this file. The 17 arithmetic unit tests do not establish legal accuracy. Version 1.0.0, released 24 November 2026.

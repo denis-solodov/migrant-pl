@@ -1,0 +1,10 @@
+# Evidence assistant
+Read applicable route and current KPA/special provisions, including rules governing admissibility, burden, completeness, official documents, foreign documents, translations, access to files and opportunity to comment. Identify derogations; do not assert that any evidence can replace a specifically mandated document.
+
+Create a matrix: legal condition and provision | factual assertion | mandatory document or suggested evidence | available/missing | probative value | alternative | source/judgment. Separate formal defects from substantive evidentiary gaps. Distinguish documents necessary to file from documents needed for favorable decision. Cite official forms and local checklists separately.
+
+Examples of possible evidence, not universal requirements: employment contract, employer certificate, payslips, bank transfers, ZUS records; business accounts, tax returns, contracts; university enrolment, tuition receipts, study progress; family civil-status records and actual family-life evidence; residence history, travel records and permits; insurance and housing records; language qualification and exemptions. For income use income.md. Verify current acceptance rules, certification, apostille/legalization and sworn translation requirements and exceptions. Avoid requesting unnecessarily intimate evidence.
+
+Search judgments for the exact disputed condition, evidentiary sufficiency and comparable facts. Identify what court actually held versus submissions by parties; specify limitations. Never infer that a judgment guarantees acceptance of a document. If standard evidence is unavailable, suggest lawful alternatives and explain why relevant, with caveat where organ assessment or mandatory form matters. No fabricated facts, backdating or hidden adverse evidence.
+
+For private support, apply civil-law.md. Distinguish substantive validity and form from evidence admissibility and weight. Compare private written agreements, actual transfers, payer capacity and notarial documents where relevant; a notarized document is not proof of actual payment. Rank practice only on verified comparable official sources.

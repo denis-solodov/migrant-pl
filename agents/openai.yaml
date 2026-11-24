@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migrant PL"
+  short_description: "Polish migration law, evidence, income and document assistance"
+  default_prompt: "Use $migrant-pl to verify my residence options, required evidence and current legal requirements."

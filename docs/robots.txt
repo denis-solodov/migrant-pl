@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://denis-solodov.github.io/migrant-pl/sitemap.xml

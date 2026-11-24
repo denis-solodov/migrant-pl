@@ -1,0 +1,54 @@
+# Migrant PL — Polish migration law skill for AI agents
+
+An experimental, open-source Agent Skill for multilingual information on Polish migration law, residence, citizenship, international protection and administrative procedures. It guides an AI agent to verify official sources, compare lawful routes, select evidence, calculate with verified inputs and prepare drafts in Polish.
+
+[Project website](https://denis-solodov.github.io/migrant-pl/) · [Download v1.0.0](https://github.com/denis-solodov/migrant-pl/releases/download/v1.0.0/migrant-pl-1.0.0.zip) · [Try 14 multilingual prompts](examples/try-migrant-pl.md) · [Report an issue](https://github.com/denis-solodov/migrant-pl/issues)
+
+**Version:** 1.0.0 · **Status:** experimental public beta · **License:** MIT.
+
+## Installation
+
+Download the release ZIP and extract its `migrant-pl` folder into a skills directory supported by your AI agent. For a Codex project, place it at `.agents/skills/migrant-pl/` and invoke `$migrant-pl`. The folder must retain `SKILL.md`, `references/`, `assets/`, `agents/` and `scripts/`.
+
+If your agent offers a skill-upload interface, use the release ZIP according to that product's instructions. Availability depends on the product and account. Live legal verification needs web access in the host. Arithmetic needs Python 3 and no third-party packages; the skill does not grant tool access.
+
+## What it covers
+
+- Residence routes, employment, family, studies, EU free movement and citizenship.
+- International protection, refusals, return decisions and procedural safeguards.
+- Official Polish and EU legislation and national, CJEU and ECtHR case law.
+- Evidence selection, income, deadlines, residence periods and Schengen arithmetic.
+- Explanations in the user's language; document drafts in Polish.
+
+The instructions require official primary sources and separate statutory requirements, office practice and uncertain interpretations. Current thresholds, laws and case law are **not** automatically updated or certified by this package.
+
+## Try it
+
+Ask in your preferred language. Examples include English, Ukrainian, Russian, Spanish, French, German and Polish. These are prompt examples, not evidence of equal performance across languages.
+
+> Use $migrant-pl. I have received a request for additional documents in my temporary residence case. Explain the letter, verify the applicable deadline and help draft a response in Polish.
+
+See [all 14 test prompts](examples/try-migrant-pl.md) and the [manual evaluation plan](tests/scenarios.md). Manual scenarios have not been executed as part of this release.
+
+## Verification and tests
+
+```bash
+python -m unittest discover -s tests -v
+python scripts/calculators.py --help
+```
+
+The 17 supplied unit tests passed during release preparation. They test arithmetic, not legal correctness or model behaviour. An automated GitHub workflow reruns them on changes.
+
+## Feedback
+
+Migrants, lawyers, researchers, NGOs and public administration professionals are invited to test the skill. Report problems through [GitHub Issues](https://github.com/denis-solodov/migrant-pl/issues), including the prompt, model, skill version, date, relevant answer, issue description and an official source supporting a correction where available. Use fictional or anonymised information. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Related project
+
+[Prawnik PL](https://github.com/denis-solodov/prawnik-pl) covers Polish law and administration more broadly. Migrant PL is published separately to maintain its migration-specific references, downloads and issue tracker.
+
+## Disclaimer and license
+
+Migrant PL is an experimental legal information and document-drafting tool, not a substitute for professional legal advice. Responses may contain errors and should be independently verified before use in administrative or judicial proceedings. It is not an official government service.
+
+Released under the [MIT License](LICENSE). Copyright notices in the supplied package are retained.

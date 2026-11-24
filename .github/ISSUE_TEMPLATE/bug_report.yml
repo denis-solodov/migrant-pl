@@ -1,0 +1,28 @@
+name: Report a problem
+description: Report an incorrect answer, calculation, source or installation problem.
+body:
+  - type: markdown
+    attributes:
+      value: Use fictional or anonymised information. Do not include personal identifiers or confidential documents.
+  - type: input
+    id: version
+    attributes:
+      label: Skill version, AI model and test date
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Anonymised prompt and relevant response
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What went wrong, and what should happen?
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Supporting official legal source, if available
