@@ -8,6 +8,14 @@ An experimental, open-source Agent Skill for multilingual information on Polish 
 
 ## Installation
 
+Install from GitHub with the Skills CLI (Node.js 22.20+ and npm):
+
+```bash
+npx skills add denis-solodov/migrant-pl --skill migrant-pl --agent codex --copy --yes
+```
+
+This command was verified in an isolated project directory. For ZIP installation:
+
 Download the release ZIP and extract its `migrant-pl` folder into a skills directory supported by your AI agent. For a Codex project, place it at `.agents/skills/migrant-pl/` and invoke `$migrant-pl`. The folder must retain `SKILL.md`, `references/`, `assets/`, `agents/` and `scripts/`.
 
 If your agent offers a skill-upload interface, use the release ZIP according to that product's instructions. Availability depends on the product and account. Live legal verification needs web access in the host. Arithmetic needs Python 3 and no third-party packages; the skill does not grant tool access.
@@ -42,6 +50,13 @@ The 17 supplied unit tests passed during release preparation. They test arithmet
 ## Feedback
 
 Migrants, lawyers, researchers, NGOs and public administration professionals are invited to test the skill. Report problems through [GitHub Issues](https://github.com/denis-solodov/migrant-pl/issues), including the prompt, model, skill version, date, relevant answer, issue description and an official source supporting a correction where available. Use fictional or anonymised information. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Skill catalogues
+
+- [skills.sh](https://skills.sh/denis-solodov/migrant-pl/migrant-pl)
+- [agentskill.sh](https://agentskill.sh/@denis-solodov/migrant-pl)
+
+Catalogue listings are discovery aids, not certifications of legal accuracy or security. Curated catalogue submissions are tracked separately in [Awesome Claude Skills PR #1531](https://github.com/BehiSecc/awesome-claude-skills/pull/1531) and [Awesome Legaltech PL issue #5](https://github.com/apiotrowski-afk/awesome-legaltech-pl/issues/5); neither is an accepted listing until its maintainer approves it.
 
 ## Related project
 
