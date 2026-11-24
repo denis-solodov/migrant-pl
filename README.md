@@ -2,23 +2,33 @@
 
 An experimental, open-source Agent Skill for multilingual information on Polish migration law, residence, citizenship, international protection and administrative procedures. It guides an AI agent to verify official sources, compare lawful routes, select evidence, calculate with verified inputs and prepare drafts in Polish.
 
-[Project website](https://denis-solodov.github.io/migrant-pl/) · [Download v1.0.0](https://github.com/denis-solodov/migrant-pl/releases/download/v1.0.0/migrant-pl-1.0.0.zip) · [Try 14 multilingual prompts](examples/try-migrant-pl.md) · [Report an issue](https://github.com/denis-solodov/migrant-pl/issues)
+[Project website](https://denis-solodov.github.io/migrant-pl/) · [Download v1.0.1](https://github.com/denis-solodov/migrant-pl/releases/download/v1.0.1/migrant-pl-1.0.1.zip) · [Try 14 multilingual prompts](examples/try-migrant-pl.md) · [Report an issue](https://github.com/denis-solodov/migrant-pl/issues)
 
-**Version:** 1.0.0 · **Status:** experimental public beta · **License:** MIT.
+**Version:** 1.0.1 · **Status:** experimental public beta · **License:** MIT.
 
 ## Installation
 
-Install from GitHub with the Skills CLI (Node.js 22.20+ and npm):
+Review `SKILL.md` and `scripts/` before installation. Skills can affect an agent's actions, and community publication is not a security certification. Install only a version and maintainer you trust. This package has no runtime installer or automatic updater.
+
+Install the reviewed release with the version-pinned Skills CLI (Node.js 22.20+ and npm):
 
 ```bash
-npx skills add denis-solodov/migrant-pl --skill migrant-pl --agent codex --copy --yes
+npx skills@1.9.0 add https://github.com/denis-solodov/migrant-pl/tree/v1.0.1 --skill migrant-pl --agent codex --copy
 ```
 
-This command was verified in an isolated project directory. For ZIP installation:
+For ZIP installation, download `migrant-pl-1.0.1.zip` and `SHA256SUMS.txt` from the same versioned release. Check the expected checksum against the published release record, then verify the ZIP before extracting it:
+
+```powershell
+Get-FileHash -Algorithm SHA256 -LiteralPath .\migrant-pl-1.0.1.zip
+```
+
+A matching checksum detects changed bytes relative to that record; it does not independently establish the maintainer's identity or the safety of the contents. If the source, version or checksum is unexpected, stop and review it. Do not run downloaded shell installers. Release ZIPs contain one skill folder and no install hooks.
 
 Download the release ZIP and extract its `migrant-pl` folder into a skills directory supported by your AI agent. For a Codex project, place it at `.agents/skills/migrant-pl/` and invoke `$migrant-pl`. The folder must retain `SKILL.md`, `references/`, `assets/`, `agents/` and `scripts/`.
 
 If your agent offers a skill-upload interface, use the release ZIP according to that product's instructions. Availability depends on the product and account. Live legal verification needs web access in the host. Arithmetic needs Python 3 and no third-party packages; the skill does not grant tool access.
+
+For the trust boundary, source-domain checks and distribution details, see [SECURITY.md](SECURITY.md).
 
 ## What it covers
 

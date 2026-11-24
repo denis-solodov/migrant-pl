@@ -1,0 +1,46 @@
+name: Build and attest release
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release version (three numeric components)
+        required: true
+        default: '1.0.1'
+permissions:
+  contents: read
+concurrency:
+  group: migrant-pl-release
+  cancel-in-progress: false
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    env:
+      RELEASE_VERSION: ${{ inputs.version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Test and package
+        run: |
+          python -B -m unittest discover -s tests -v
+          python scripts/package_release.py --version "$RELEASE_VERSION" --output dist
+          cd dist
+          sha256sum --check SHA256SUMS.txt
+      - name: Attest ZIP provenance
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4.2.2
+        with:
+          subject-path: dist/migrant-pl-*.zip
+      - name: Verify attestation and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh attestation verify "dist/migrant-pl-$RELEASE_VERSION.zip" --repo "$GITHUB_REPOSITORY"
+          gh release create "v$RELEASE_VERSION" "dist/migrant-pl-$RELEASE_VERSION.zip" dist/SHA256SUMS.txt --target "$GITHUB_SHA" --title "Migrant PL v$RELEASE_VERSION — experimental public beta" --notes-file CHANGELOG.md --prerelease
